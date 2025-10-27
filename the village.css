@@ -22,6 +22,12 @@
     padding: 50px;
     margin-top: 80px;
 }
+.left:hover{
+    transform: scale(1.05);
+}
+.right:hover{
+    transform: scale(1.05);
+}
 .right{
     background-color: white;
     height: 1100px;
@@ -105,4 +111,5 @@ h2{
     border-radius: 10px;
     padding: 10px;
     font-size: 15px;
+
 }
