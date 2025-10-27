@@ -1,0 +1,108 @@
+.mb-3{
+    top: 1210px;
+    height: 100px;
+}
+
+.head{
+    padding: 10px 0px 0px 10px;
+    background-color: rgb(46, 46, 93);
+    color: white;
+
+}
+.container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 1500px;
+}
+.left{
+    background-color: rgb(39, 89, 42);
+    height: 1000px;
+    color: white;
+    border-radius: 20px;
+    padding: 50px;
+    margin-top: 80px;
+}
+.right{
+    background-color: white;
+    height: 1100px;
+    color: black
+}
+.info{
+    margin-right: 20px;
+    margin-top: 90px;
+    background-color: lightgrey;
+    border: 10px dotted lightblue;
+    padding: 20px;
+    border-radius: 20px;
+}
+#carouselExampleIndicators{
+    width: 500px;
+    position: absolute;
+    top: 650px;
+}
+b{
+    color: rgb(239, 171, 53);
+}
+.đki{
+    position:absolute;
+    top: 370px;
+    text-decoration: none;
+    color:black;
+    background-color: pink;
+    border: 2px solid;
+    border-radius: 20px;
+    padding: 30px;
+}
+.đki:hover{
+    color: green;
+    transform: scaleX(1.2);
+}
+h2{
+    text-align: center;
+    padding-top: 20px;
+}
+.mb-3{
+    height: 150px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.btn{
+    margin-left: 40px;
+}
+.buttonmusic{
+    background-color: #5d7ea1;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 150px;
+    height: 60px;
+    position: absolute;
+    left: 10px;
+    top: 60px;
+}
+    
+.buttonmusic:hover{
+    transform: scale(1.05);
+    color: green;
+}
+.confirm{
+    position:absolute;
+    top: 260px;
+    left:50px;
+}
+.return{
+    position:absolute;
+    top: 330px;
+    left: 270px;
+    text-decoration: none;
+    color: white;
+    background-color: tan;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 15px;
+}
