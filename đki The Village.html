@@ -13,8 +13,8 @@
 <form>
   <div class="mb-3">
     <h2> Hãy đăng kí ngay!</h2>
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="abc@gmail.com">
+    <label for="exampleInputEmail1" class="form-label">Email / Phone</label>
+    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
     <label for="exampleInputname" class="form-label">Họ và tên</label>
@@ -37,38 +37,30 @@
   const confirmBox = document.getElementById("confirm");
   const message = document.getElementById("message");
 
-  //submit
-document.getElementById("submitButton").addEventListener("click", () => {
-  const name = nameInput.value.trim();
-  const email = emailInput.value.trim();
+  // submit
+  document.getElementById("submitButton").addEventListener("click", () => {
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const confirm = confirmBox.checked;
 
-  if (!name || !email ){
-    message.textContent="Vui lòng nhập đầy đủ Họ tên và email";
-    message.classList.add("text-danger");
-
-     setTimeout(()=>{
-      message.textContent="Vui lòng nhập đầy đủ Họ tên và email";
-      message.classList.remove("text-danger");
-    }, 5000);
-    return;
-  }
-  
-  if (!confirmBox.checked){
-    message.textContent="Bạn phải xác nhận đăng kí trước";
-    message.classList.add("text-danger");
-    setTimeout(()=>{
-      message.textContent="Vui lòng xác nhận đăng kí";
-      message.classList.remove("text-danger");
-    }, 5000);
-    return;
-  }
-  message.textContent='Bạn đã đăng kí thành công!';
-  message.classList.add("text-success");
-  setTimeout(()=>{
-      message.textContent="";
+    if (name === "" || email === "" || !confirm) {
+      message.textContent = "Vui lòng nhập đầy đủ thông tin và tick dấu xác nhận";
       message.classList.remove("text-success");
-    }, 5000);
-});
+      message.classList.add("text-danger");
+
+      setTimeout(() => {
+        message.textContent = "";
+      }, 5000);
+    } else {
+      message.textContent = `Bạn ${name} đã đăng kí thành công!`;
+      message.classList.remove("text-danger");
+      message.classList.add("text-success");
+
+      setTimeout(() => {
+        message.textContent = "";
+      }, 5000);
+    }
+  });
 
 //nút reset
 
@@ -81,3 +73,4 @@ document.getElementById("resetButton").addEventListener("click",()=>{
 </script>
 
 </body>
+
